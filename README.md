@@ -2,3 +2,11 @@
 ![bandicam 2023-01-24 19-11-24-243](https://user-images.githubusercontent.com/97333773/214561547-694ff9f9-6aef-47d7-8b02-ffe5edf162a5.png)
 # Python-Script
 DDOS PING SMS Kompyuterlarga ulanib olish 👨‍💻Yaratuvchi: Asadbek Abdubannopov @coder_18_03  💬
+
+How to use:
+pip install socket
+pip install pyautogui
+pip install subprocess
+
+cd Python-Script
+python script.py
