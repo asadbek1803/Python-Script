@@ -1,11 +1,17 @@
-import datetime as dt
-import time
-import platform
-from art import tprint
-import socket,os,time,random 
-import pyautogui
-import subprocess
-
+try:
+  import datetime as dt
+  import time
+  import platform
+  from art import tprint
+  import socket,os,time,random 
+  import pyautogui
+  import subprocess
+except ImportError:
+  print("Not installed Script packages..")
+  time.sleep(2)
+  print("Checking...")
+  
+  
 print(r"""
 ___ ___ ___      _____     ___ ____ ___    ______      _____     _____       ____   ___
 |   |   |   |   | ____|   |   |    |   |   |   _ \     |  |\ \   |  ____|    |    | /  /
