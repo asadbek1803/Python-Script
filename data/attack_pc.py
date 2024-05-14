@@ -1,13 +1,6 @@
-#Tuzuvchi Asadbek Abdubannopov
-#Yangilangan sana: 08/30/2023 10:41
-
 import socket
-import subprocess
 import sys
-# def runping():
-#     print("Xatolik yuz berdi! Yoki kodlar mavjud emas!")
-
-
+import subprocess
 
 def pc_attack():
 
@@ -52,13 +45,3 @@ def pc_attack():
             run = False
 
     server.close()
-
-
-
-
-
-
-
-         
-
-    

@@ -34,19 +34,20 @@ ____    ____   ________|   ___      ____   |____/      |__| /_/  _________|  |__
     print("\n         [4] - Boshqa kompyuterlarga ulanib boshqarish          *")
     print("\n****************************************************************")
 
-
-    ask_menu = int(input("Menu: "))
-    if ask_menu == 1:
-            runddos()
-    if ask_menu == 2:
-            runping()
-    if ask_menu == 3:
-            run_sms()
-    if ask_menu == 4:
-            pc_attack()
-    else:
-            print("Bunday raqamdagi menu mavjud emas!")
-
+    try:
+        ask_menu = int(input("Menu: "))
+        if ask_menu == 1:
+                runddos()
+        if ask_menu == 2:
+                runping()
+        if ask_menu == 3:
+                run_sms()
+        if ask_menu == 4:
+                pc_attack()
+        else:
+                print("Bunday raqamdagi menu mavjud emas!")
+    except KeyboardInterrupt:
+        print("[STOPPED] Dasturdan chiqildi.")
 
 if __name__ == '__main__':
     if test_connection():
