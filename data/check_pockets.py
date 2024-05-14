@@ -32,10 +32,15 @@ def check_module()-> bool:
 
 if check_module():
     print("[INFO] Kutubxonalar bilan xatolik mavjud emas!")
+    with open("info.txt", "w") as f:
+        f.write("success")
+
 else:
     print("[ERROR] Ba'zi bir kutubxonalar mavjud emas! O'rnatish funksiyasi ishga tushdi!")
     time.sleep(2)
     install_librarys()
+    with open("info.txt", "w") as f:
+        f.write("success")
 
 
 
