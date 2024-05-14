@@ -1,12 +1,7 @@
-from .script import runddos, run_sms, runping, install_librarys, pc_attack
+from .script import runddos, run_sms, runping, pc_attack
 import datetime as dt
-import time
 import platform
-from art import tprint
-import socket,os,time,random
-import pyautogui
-import subprocess
-from .check_connection import test_connection
+from data.check_connection import test_connection
 def menu():
 
     print(r"""

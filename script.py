@@ -72,87 +72,10 @@ def pc_attack():
 
 
 
-def menu():
-    import datetime as dt
-    import time
-    import platform
-    from art import tprint
-    import socket,os,time,random 
-    import pyautogui
-    import subprocess
-    print(r"""
-___ ___ ___      _____     ___ ____ ___    ______      _____     _____       ____   ___
-|   |   |   |   | ____|   |   |    |   |   |   _ \     |  |\ \   |  ____|    |    | /  /
-|   |   |   |   | |____   |   |    |   |   |  | | \    |  | \ \  |  |        |    |/  /
-|   |___|   |   |____  |  |   |____|   |   |  | |  \   |  | / /  |  _____    |    |  /
-|   |___|   |        | |  |   |____|   |   |  | |  |   |  |/ /   |  _____|   |    |/ \
-|   |   |   |        | |  |   |    |   |   |  |/  /    |  |\ \   |  |        |    |\  \
-|   |   |   |	_____| |  |   |    |   |   |     /     |  | \ \  |  |_____   |    | \  \
-____    ____   ________|   ___      ____   |____/      |__| /_/  _________|  |____|  \__\
- """)  
-    x = platform.system()
-    print(f"Systema turi {x}")
 
 
-    x = dt.datetime.now()
-    # print(x)
-    vaqt = dt.datetime.now()
-    yil = x.year
-    kun = x.strftime("%A")
-
-    print(f"Hozirgi yil {yil}")
-    print(f"Hozirgi soat {vaqt}")
-
-    print("\n****************************************************************")
-    print("\n         [1] - DDOS hujum                                       *")
-    print("\n         [2] - Internet tezligini o'lchash                      *")
-    print("\n         [3] - Do'stlarni lol qoldirish                         *")
-    print("\n         [4] - Boshqa kompyuterlarga ulanib boshqarish          *")
-    print("\n****************************************************************")
-
-    try:
-        ask_menu = int(input("Menu: "))
-        if ask_menu == 1:
-            runddos()
-        if ask_menu == 2:
-            runping()
-        if ask_menu == 3:
-            run_sms()
-        if ask_menu == 4:
-            pc_attack()
-        else:
-            print("Bunday raqamdagi menu mavjud emas!")
-
-    except ValueError:
-        print("Siz butun son kiritishingiz kerak!")
 
 
-def install_librarys():
-    import os
-    os.system('pip install art')
-    os.system('pip install pyautogui')
-    os.system('pip install subprocess')
-    os.system('pip install pyspeedtest')
-    os.system('pip install speedtest-cli')
-
-
-def check_module():
-    try:
-        import datetime as dt
-        import time
-        import platform
-        from art import tprint
-        import socket,os,time,random 
-        import pyautogui
-        import subprocess
-        import speedtest
-
-        menu()
-
-    except ImportError:
-        install_librarys()
-        print("Not installed Script packages..")
          
-if __name__ == '__main__':
-    check_module()
+
     
